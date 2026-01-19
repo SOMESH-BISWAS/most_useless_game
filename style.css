@@ -164,3 +164,17 @@ html, body {
     opacity: 0.5;
     transform: translateX(-50%) translateY(0);
 }
+
+/* SHRINK BUTTON ON MOBILE */
+@media (max-width: 600px) {
+    .red-button {
+        width: 150px;
+        height: 165px;
+    }
+
+    .button-top {
+        width: 85%;
+        height: 55%;
+        font-size: 24px; /* smaller text for mobile */
+    }
+}
