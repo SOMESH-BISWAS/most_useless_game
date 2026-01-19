@@ -109,7 +109,7 @@ html, body {
     align-items: center;
     justify-content: center;
     transform: translateY(0);
-    transition: transform 0.08s ease, box-shadow 0.08s ease;
+    transition: transform 0.001s ease, box-shadow 0.001s ease;
     box-shadow: 
         0 8px 0 rgba(0,0,0,0.1),
         inset 0 -3px 8px rgba(0,0,0,0.2);
