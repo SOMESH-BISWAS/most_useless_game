@@ -120,3 +120,14 @@ button.addEventListener("click", () => {
 });
 
 });
+
+// Randomize cloud starting positions
+document.querySelectorAll(".cloud").forEach(cloud => {
+    const duration = parseFloat(
+        getComputedStyle(cloud).animationDuration
+    );
+
+    const randomDelay = -Math.random() * duration;
+    cloud.style.animationDelay = `${randomDelay}s`;
+});
+
