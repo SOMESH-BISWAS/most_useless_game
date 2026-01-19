@@ -45,7 +45,7 @@ html, body {
 /* The coral/salmon button */
 .red-button {
     position: relative;
-    width: 200px;
+    width: 170px;
     height: 200px;
     border-radius: 50%;
     border: none;
@@ -168,13 +168,11 @@ html, body {
 /* SHRINK BUTTON ON MOBILE */
 @media (max-width: 600px) {
     .red-button {
-        width: 150px;
-        height: 165px;
+        width: 130px;
+        height: 152.9px;
     }
 
     .button-top {
-        width: 85%;
-        height: 55%;
         font-size: 24px; /* smaller text for mobile */
     }
 }
