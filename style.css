@@ -1,0 +1,155 @@
+/* Reset default browser spacing */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        to bottom,
+        #87ceeb,
+        #b0e0e6
+    );
+
+    overflow: hidden;
+}
+
+
+/* Center everything */
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    z-index: 100;
+}
+
+
+/* Score text */
+.score {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* The coral/salmon button */
+.red-button {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.05s ease;
+}
+.red-button::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    width: 110%;
+    height: 80%;
+    background: linear-gradient(
+        to bottom,
+        #e5e7eb,
+        #9ca3af
+    );
+    border-radius: 50%;
+    z-index: 1;
+}
+
+
+/* Button base (shadow/3D effect) */
+.red-button::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    width: 110%;
+    height: 80%;
+    background: #4a5568;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.button-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    border-radius: 50%;
+    background: linear-gradient(
+        to bottom,
+        #ff9d8f,
+        #ff7961
+    );
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(0);
+    transition: transform 0.08s ease, box-shadow 0.08s ease;
+    box-shadow: 
+        0 8px 0 rgba(0,0,0,0.1),
+        inset 0 -3px 8px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+.button-top::after {
+    content: "";
+    position: absolute;
+    top: 8%;
+    left: 10%;
+    width: 80%;
+    height: 40%;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+}
+
+.red-button:active {
+    transform: scale(0.99);
+}
+
+.red-button:active .button-top {
+    transform: translateY(8px);
+    box-shadow: 
+        0 2px 0 rgba(0,0,0,0.1),
+        inset 0 -1px 4px rgba(0,0,0,0.2);
+}
+
+.red-button.glow .button-top {
+    box-shadow:
+        0 8px 0 rgba(0,0,0,0.1),
+        inset 0 -3px 8px rgba(0,0,0,0.2),
+        0 0 30px rgba(255, 125, 97, 0.8);
+}
+
+.achievement {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 14px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.achievement.show {
+    opacity: 0.5;
+    transform: translateX(-50%) translateY(0);
+}
